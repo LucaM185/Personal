@@ -13,16 +13,16 @@ const bestProjects = [
 ];
 
 const bestPhotos = [
-  { image: "portfolio/S%20(15).jpg", alt: "Lake shore at dusk under a pink sky, mountains in the distance" },
-  { image: "portfolio/S%20(13).jpg", alt: "Wooden pier on a lake under a red sunset" },
-  { image: "portfolio/S%20(25).jpg", alt: "Coastal town lit up at blue hour, seen through a stone arch" },
-  { image: "portfolio/S%20(27).jpg", alt: "Blue race car cornering on a red and white kerb" },
-  { image: "portfolio/S%20(8).jpg", alt: "Mountain village at night with fog in the valley" },
-  { image: "portfolio/S%20(19).jpg", alt: "Fishing boats along a canal on a foggy morning" },
-  { image: "portfolio/S%20(23).jpg", alt: "Painted lady butterfly on purple buddleia flowers" },
-  { image: "portfolio/S%20(26).jpg", alt: "Mountain lake framed by leaves" },
-  { image: "portfolio/S%20(18).jpg", alt: "Pale mushrooms in green moss" },
-  { image: "portfolio/S%20(28).jpg", alt: "Town with a domed church at dusk, mountains on the horizon" },
+  { image: "portfolio/images/02.jpg", alt: "Lake shore at dusk under a pink sky, mountains in the distance" },
+  { image: "portfolio/images/33.jpg", alt: "Wooden pier on a lake under a red sunset" },
+  { image: "portfolio/images/18.jpg", alt: "Coastal town lit up at blue hour, seen through a stone arch" },
+  { image: "portfolio/images/40.jpg", alt: "Blue race car cornering on a red and white kerb" },
+  { image: "portfolio/images/19.jpg", alt: "Mountain village at night with fog in the valley" },
+  { image: "portfolio/images/17.jpg", alt: "Fishing boats along a canal on a foggy morning" },
+  { image: "portfolio/images/37.jpg", alt: "Painted lady butterfly on purple buddleia flowers" },
+  { image: "portfolio/images/39.jpg", alt: "Mountain lake framed by leaves" },
+  { image: "portfolio/images/13.jpg", alt: "Pale mushrooms in green moss" },
+  { image: "portfolio/images/24.jpg", alt: "Town with a domed church at dusk, mountains on the horizon" },
 ];
 
 const FADE_MS = 450;
