@@ -1,0 +1,7 @@
+{
+  "name": "brand",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  }
+}

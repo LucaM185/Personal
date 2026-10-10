@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luca Miglioli — Industrial workflows</title>
+  <meta name="description" content="Workflow optimization for manufacturing companies, Rockwell PLC projects, document research, and local AI that stays inside the company.">
+  <meta name="theme-color" content="#111820">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html">
+      <span class="logo-name"><em>L</em>UCA MIGLIOLI</span>
+      <span class="logo-tag">Industrial workflows</span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <div class="menu" hidden>
+        <a class="menu-label" href="services.html" data-nav="services">Services</a>
+        <button class="menu-chev" type="button" aria-expanded="false" aria-controls="menu-services" aria-label="Open Services menu"></button>
+        <div class="menu-panel menu-panel--mega" id="menu-services">
+          <div class="menu-col menu-col--dark">
+            <p class="menu-col-title">On the floor</p>
+            <div class="menu-col-links">
+              <span class="menu-item" data-nav="service-manufacturing">
+                <span class="menu-item-title">Manufacturing workflows</span>
+                <span class="menu-item-note">Planning, the line, and quality</span>
+              </span>
+              <span class="menu-item" data-nav="service-rockwell">
+                <span class="menu-item-title">Rockwell PLC</span>
+                <span class="menu-item-note">The workflow around the controller</span>
+              </span>
+              <span class="menu-item" data-nav="service-workflows">
+                <span class="menu-item-title">Automatic workflows</span>
+                <span class="menu-item-note">A trigger, a rule, a visible failure</span>
+              </span>
+            </div>
+          </div>
+          <div class="menu-col menu-col--paper">
+            <p class="menu-col-title">Documents</p>
+            <div class="menu-col-links">
+              <span class="menu-item" data-nav="service-documents">
+                <span class="menu-item-title">Document research</span>
+                <span class="menu-item-note">Word, Excel, Eplan, and email</span>
+              </span>
+              <span class="menu-item" data-nav="service-docx">
+                <span class="menu-item-title">DOCX translation</span>
+                <span class="menu-item-note">Structure kept, glossary applied</span>
+              </span>
+            </div>
+          </div>
+          <div class="menu-col">
+            <p class="menu-col-title">Systems</p>
+            <div class="menu-col-links">
+              <span class="menu-item" data-nav="service-local-ai">
+                <span class="menu-item-title">Local AI</span>
+                <span class="menu-item-note">Models that stay in the company</span>
+              </span>
+              <span class="menu-item" data-nav="service-excel">
+                <span class="menu-item-title">Excel to applications</span>
+                <span class="menu-item-note">The workbook that became the system</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu" hidden>
+        <a class="menu-label" href="competencies.html" data-nav="competencies">Competencies</a>
+        <button class="menu-chev" type="button" aria-expanded="false" aria-controls="menu-competencies" aria-label="Open Competencies menu"></button>
+        <div class="menu-panel menu-panel--mega" id="menu-competencies">
+          <div class="menu-col menu-col--dark">
+            <p class="menu-col-title">Operations</p>
+            <div class="menu-col-links">
+              <span class="menu-item">
+                <span class="menu-item-title">Manufacturing operations</span>
+                <span class="menu-item-note">Handoffs on the real process</span>
+              </span>
+              <span class="menu-item">
+                <span class="menu-item-title">Rockwell control systems</span>
+                <span class="menu-item-note">Project hygiene and change control</span>
+              </span>
+              <span class="menu-item">
+                <span class="menu-item-title">Workflow automation</span>
+                <span class="menu-item-note">Rules a supervisor can read</span>
+              </span>
+            </div>
+          </div>
+          <div class="menu-col menu-col--paper">
+            <p class="menu-col-title">Documents &amp; AI</p>
+            <div class="menu-col-links">
+              <span class="menu-item">
+                <span class="menu-item-title">Technical documents</span>
+                <span class="menu-item-note">Word, Excel, Eplan, email</span>
+              </span>
+              <span class="menu-item">
+                <span class="menu-item-title">DOCX translation</span>
+                <span class="menu-item-note">Glossary terms, original structure</span>
+              </span>
+              <span class="menu-item">
+                <span class="menu-item-title">Local AI</span>
+                <span class="menu-item-note">On hardware you control</span>
+              </span>
+            </div>
+          </div>
+          <div class="menu-col">
+            <p class="menu-col-title">Engineering</p>
+            <div class="menu-col-links">
+              <span class="menu-item">
+                <span class="menu-item-title">Application engineering</span>
+                <span class="menu-item-note">From workbook to software</span>
+              </span>
+              <span class="menu-item">
+                <span class="menu-item-title">Avionics displays</span>
+                <span class="menu-item-note">General aviation head-up displays</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu menu-end" hidden>
+        <a class="menu-label" href="projects.html" data-nav="projects">Projects</a>
+        <button class="menu-chev" type="button" aria-expanded="false" aria-controls="menu-projects" aria-label="Open Projects menu"></button>
+        <div class="menu-panel menu-panel--mega menu-panel--compact" id="menu-projects">
+          <div class="menu-col menu-col--dark">
+            <p class="menu-col-title">Overview</p>
+            <div class="menu-col-links">
+              <span class="menu-item">
+                <span class="menu-item-title">All projects</span>
+                <span class="menu-item-note">Industrial work and avionics</span>
+              </span>
+            </div>
+          </div>
+          <div class="menu-col menu-col--paper">
+            <p class="menu-col-title">Avionics</p>
+            <div class="menu-col-links">
+              <span class="menu-item" data-nav="project-avionics">
+                <span class="menu-item-title">General aviation HUD</span>
+                <span class="menu-item-note">Head-up displays for light aircraft</span>
+              </span>
+            </div>
+          </div>
+          <div class="menu-col">
+            <p class="menu-col-title">More</p>
+            <div class="menu-col-links">
+              <span class="menu-item" data-nav="project-other">
+                <span class="menu-item-title">Other projects</span>
+                <span class="menu-item-note">Tools, studies, one-off software</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="nav-link" href="partners.html" data-nav="partners" hidden>Partners</a>
+      <a class="btn btn-solid nav-cta" href="contact.html" data-nav="contact" hidden><span class="btn-chev" aria-hidden="true">›</span> Contact us</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-solid header-cta" href="contact.html" data-nav="contact" hidden><span class="btn-chev" aria-hidden="true">›</span> Contact us</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <main id="content">
+    <section class="hero band-dark">
+  <div class="waves" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <h1>Reliability and speed start at process design</h1>
+    <p class="hero-scope">Manufacturing · Rockwell PLC · Technical documents · On-premise AI</p>
+  </div>
+</section>
+
+<section class="section work-section" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="section-head section-head--compact">
+      <p class="kicker">What we build</p>
+      <h2 id="work-title">Systems you can inspect.</h2>
+    </div>
+    <div class="cards work-grid">
+      <article class="card work-card is-open" data-href="service-docx.html" tabindex="0" aria-expanded="true">
+        <div class="card-body">
+          <span class="tag">01 · Documents</span>
+          <h3>Translations preserving docx structure</h3>
+        </div>
+        <figure class="photo">
+          <img src="images/technical-translation-review.webp" alt="Technical translation review with source and translated terms" loading="lazy" decoding="async">
+        </figure>
+        <div class="card-expand">
+          <p>Translating big docx manuals is a tedious, expensive and error prone process. Translators often copy paste paragraphs to chatgpt and re-paste them back; this app automates that process while maintaining perfect docx structure (there is a local AI option for privacy).</p>
+          <p>You can have your company glossary for technical terms and check the results with error detection systems.</p>
+        </div>
+      </article>
+      <article class="card work-card is-open" data-href="service-workflows.html" tabindex="0" aria-expanded="true">
+        <div class="card-body">
+          <span class="tag">02 · Operations</span>
+          <h3>Custom app for documents (word, excel, pdf, eplan)</h3>
+        </div>
+        <figure class="photo photo-interface">
+          <img src="images/excel-approval-workflow.webp" alt="Custom app for company documents: Word, Excel, PDF, and Eplan" loading="lazy" decoding="async">
+        </figure>
+        <div class="card-expand">
+          <p>Get answers in seconds from private company data, with links to the exact paragraphs of the documents used to give you the answer. Eplan parsing support and local AI are options.</p>
+          <p>Wide support for Excel file modification and analysis.</p>
+        </div>
+      </article>
+      <article class="card work-card is-open" data-href="project-avionics.html" tabindex="0" aria-expanded="true">
+        <div class="card-body">
+          <span class="tag">03 · Avionics</span>
+          <h3>Everything a pilot needs, in front of his eyes. Custom built.</h3>
+        </div>
+        <figure class="photo">
+          <img src="images/aviation-hud-prototype.webp" alt="General aviation head-up display prototype on a test bench" loading="lazy" decoding="async">
+        </figure>
+        <div class="card-expand">
+          <p>GPS speed, heading, altitude and inertial attitude. Flight plans can be made from the app and they are instantly transferred by Bluetooth to the HUD device.</p>
+        </div>
+      </article>
+      <article class="card work-card is-open" data-href="service-excel.html" tabindex="0" aria-expanded="true">
+        <div class="card-body">
+          <span class="tag">04 · Excel</span>
+          <h3>Complex Excel into web apps that are easy to maintain</h3>
+        </div>
+        <figure class="photo photo-interface">
+          <img src="images/course-management-webapp.webp" alt="Training and safety course management web app that replaced a complex spreadsheet" loading="lazy" decoding="async">
+        </figure>
+        <div class="card-expand">
+          <p>Adding data is easier. Maintenance is easier. New employees learn the system faster, and errors go down.</p>
+          <p>The apps are easy to build and maintain through custom software that includes automatic backups.</p>
+        </div>
+      </article>
+      <article class="card work-card is-open" data-href="service-rockwell.html" tabindex="0" aria-expanded="true">
+        <div class="card-body">
+          <span class="tag">05 · Controls</span>
+          <h3>Controls &amp; automation</h3>
+        </div>
+        <figure class="photo">
+          <img src="images/studio-5000-l5x-automation.webp" alt="Studio 5000 L5X automation interface" loading="lazy" decoding="async">
+        </figure>
+        <div class="card-expand">
+          <p>Saving time and errors in data entry by transforming any custom excel file exported from your electrical schemas into perfect plc code to easily import into the app</p>
+        </div>
+      </article>
+      <article class="card work-card is-open" data-href="service-local-ai.html" tabindex="0" aria-expanded="true">
+        <div class="card-body">
+          <span class="tag">06 · Local AI</span>
+          <h3>Local AI systems</h3>
+        </div>
+        <figure class="photo">
+          <img src="images/local-ai-vllm-platform.webp" alt="Local AI inference platform running on company-controlled hardware" loading="lazy" decoding="async">
+        </figure>
+        <div class="card-expand">
+          <p>Keep your data private by using an AI that is self hosted INSIDE of your company network.</p>
+          <p><strong>Note:</strong> this is expensive and definitely not for everyone. It can be done after a quick study to decide if it's worth it for the privacy improvements.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section process-section">
+  <div class="wrap">
+    <div class="section-head section-head--compact">
+      <p class="kicker">Method</p>
+      <h2>How an engagement runs.</h2>
+    </div>
+    <div class="steps">
+      <article class="step">
+        <p class="step-num">01</p>
+        <h3>Walk the work</h3>
+      </article>
+      <article class="step">
+        <p class="step-num">02</p>
+        <h3>Map the handoffs</h3>
+      </article>
+      <article class="step">
+        <p class="step-num">03</p>
+        <h3>Build and ship</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="logo logo-light" href="index.html">
+        <span class="logo-name"><em>L</em>UCA MIGLIOLI</span>
+        <span class="logo-tag">Industrial workflows</span>
+      </a>
+      <p class="footer-blurb">Workflow optimization, document research, and local AI for industrial teams.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-label">Company</p>
+      <a href="competencies.html">Competencies</a>
+      <a href="partners.html">Partners</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-label">Services</p>
+      <a href="service-manufacturing.html">Manufacturing</a>
+      <a href="service-documents.html">Document research</a>
+      <a href="service-docx.html">DOCX translation</a>
+      <a href="service-local-ai.html">Local AI</a>
+      <a href="service-rockwell.html">Rockwell PLC</a>
+      <a href="service-workflows.html">Automatic workflows</a>
+      <a href="service-excel.html">Excel to applications</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-label">Projects</p>
+      <a href="projects.html">All projects</a>
+      <a href="project-avionics.html">General aviation HUD</a>
+      <a href="project-other.html">Other projects</a>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <span>© <span id="year"></span> Luca Miglioli</span>
+    <a href="mailto:hello@artificialsystems.example">hello@artificialsystems.example</a>
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

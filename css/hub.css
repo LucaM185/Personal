@@ -1,0 +1,55 @@
+/* Hub-only additions on top of the /brand stylesheet (css/styles.css). */
+
+/* Rotating showcase: slots fade out, swap content, fade back in */
+img[data-rotate],
+[data-rotate] img,
+[data-rotate] .tag,
+[data-rotate] h3 { transition: opacity 0.45s ease; }
+
+img.is-fading,
+.is-fading img,
+.is-fading .tag,
+.is-fading h3 { opacity: 0; }
+
+.photo-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.photo-row .photo {
+  display: block;
+  aspect-ratio: 3 / 2;
+}
+
+.photo-row .photo img { transition: opacity 0.45s ease, transform 0.6s ease; }
+
+.photo-row .photo:hover img { transform: scale(1.03); }
+
+.section-head-row {
+  max-width: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.section-head-row .more {
+  margin: 0 0 6px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.section-head-row .more:hover { color: var(--primary); text-decoration: underline; }
+
+@media (max-width: 720px) {
+  .photo-row { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .photo-row .photo:last-child { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  img[data-rotate],
+  [data-rotate] img,
+  [data-rotate] .tag,
+  [data-rotate] h3 { transition: none; }
+}
