@@ -43,7 +43,20 @@
             height: auto;
         }
 
-        .image-container, .split-images, .three-images {
+        /* Mixed aspect ratios in one row: each image grows by its aspect ratio (--ar), so all heights match */
+        .mixed-images {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .mixed-images img {
+            flex: var(--ar) 1 0;
+            width: 0;
+            height: auto;
+        }
+
+        .image-container, .split-images, .three-images, .mixed-images {
             margin-bottom: 0;
         }
 
@@ -186,6 +199,10 @@
         <img src="S (9).jpg" alt="Split Image 1">
         <img src="S (4).jpg" alt="Split Image 2">
     </div>
+    <div class="mixed-images">
+        <img src="S (30).jpg" alt="Sun halo over a sea of clouds from a snowy slope" style="--ar: 1.333">
+        <img src="S (31).jpg" alt="Chairlift silhouettes against the setting sun and a halo" style="--ar: 0.667">
+    </div>
     <div class="image-container">
         <img src="S (2).jpg" alt="Main Image">
     </div>
@@ -193,9 +210,18 @@
         <img src="S (22).jpg" alt="Image 2">
         <img src="S (21).jpg" alt="Image 2">
     </div>
+    <div class="three-images">
+        <img src="S (32).jpg" alt="Mountain valley villages lit up under a starry sky" loading="lazy">
+        <img src="S (33).jpg" alt="Fireworks in a misty valley below snowy peaks at night" loading="lazy">
+        <img src="S (34).jpg" alt="Stars and clouds above a wooden roof edge" loading="lazy">
+    </div>
 
     <div class="image-container">
         <img src="S (18).jpg" alt="Main Image">
+    </div>
+    <div class="mixed-images">
+        <img src="S (35).jpg" alt="Mountain village street with an Italian flag under low clouds" style="--ar: 0.75" loading="lazy">
+        <img src="S (36).jpg" alt="Green alpine valley under a cloudy sky, seen from a balcony" style="--ar: 1.333" loading="lazy">
     </div>
     <div class="image-container">
         <img src="S (29).jpg" alt="Main Image">
@@ -209,10 +235,21 @@
     <div class="image-container">
         <img src="S (8).jpg" alt="Main Image">
     </div>
+    <div class="split-images">
+        <img src="S (37).jpg" alt="Empty road at a crosswalk under an orange sunset cloud" loading="lazy">
+        <img src="S (38).jpg" alt="Sunset reflected in a pool, wicker lounger in the foreground" loading="lazy">
+    </div>
+    <div class="image-container">
+        <img src="S (39).jpg" alt="Drone view of a mountain stream and path through a forested valley" loading="lazy">
+    </div>
 
     <div class="split-images">
         <img src="S (14).jpg" alt="Split Image 1">
         <img src="S (28).jpg" alt="Split Image 2">
+    </div>
+    <div class="mixed-images">
+        <img src="S (40).jpg" alt="Autumn mountain village in fog, blurred from a moving train" style="--ar: 1.333" loading="lazy">
+        <img src="S (41).jpg" alt="Driftwood dragon sculpture under a bright cloudy sky" style="--ar: 0.75" loading="lazy">
     </div>
 
 
