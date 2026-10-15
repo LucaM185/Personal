@@ -460,10 +460,11 @@ body.qr-dialog-open { overflow: hidden; }
   place-items: center;
   width: 100%;
   aspect-ratio: 1;
-  padding: 8%;
+  padding: 0;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: #fff;
+  overflow: hidden;
 }
 
 .qr-image img {
@@ -1355,7 +1356,7 @@ input:user-invalid, select:user-invalid, textarea:user-invalid { border-color: #
     gap: 0;
   }
   .qr-arrow { display: none; }
-  .qr-image { padding: 7%; }
+  .qr-image { padding: 0; }
   .qr-dialog-foot { margin-inline: 2px; }
 }
 
