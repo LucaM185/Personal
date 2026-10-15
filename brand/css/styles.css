@@ -501,6 +501,21 @@ body.qr-dialog-open { overflow: hidden; }
 
 .qr-arrow:hover { background: var(--paper); }
 
+.qr-site-link {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.qr-site-link a {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+  text-underline-offset: 3px;
+}
+
+.qr-site-link a:hover { color: var(--accent); }
+
 .qr-dialog-foot {
   display: flex;
   align-items: center;
