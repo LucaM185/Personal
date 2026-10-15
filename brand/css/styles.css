@@ -336,26 +336,26 @@ a, button { touch-action: manipulation; }
   width: 52px;
   height: 52px;
   padding: 0;
-  border: 2px solid var(--accent);
+  border: 2px solid #b8bdbb;
   border-radius: 14px;
-  background: var(--primary);
-  color: #fff;
-  box-shadow: 0 5px 16px rgba(14, 27, 43, 0.24), 0 0 0 3px rgba(111, 138, 122, 0.14);
+  background: #d6d9d8;
+  color: var(--primary);
+  box-shadow: 0 5px 16px rgba(14, 27, 43, 0.14), 0 0 0 3px rgba(111, 138, 122, 0.1);
   cursor: pointer;
   transition: background .16s ease, border-color .16s ease, box-shadow .16s ease, transform .16s ease;
 }
 
 .qr-trigger:hover {
-  background: var(--primary-hover);
-  border-color: var(--primary-hover);
-  color: #fff;
-  box-shadow: 0 8px 22px rgba(14, 27, 43, 0.3), 0 0 0 4px rgba(111, 138, 122, 0.2);
+  background: #fff;
+  border-color: #c9cecc;
+  color: var(--primary);
+  box-shadow: 0 8px 22px rgba(14, 27, 43, 0.18), 0 0 0 4px rgba(111, 138, 122, 0.14);
   transform: translateY(-2px) scale(1.04);
 }
 
 .qr-trigger svg {
-  width: 27px;
-  height: 27px;
+  width: 32px;
+  height: 32px;
   fill: currentColor;
 }
 
