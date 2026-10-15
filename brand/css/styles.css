@@ -333,26 +333,29 @@ a, button { touch-action: manipulation; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 52px;
+  height: 52px;
   padding: 0;
-  border: 0;
-  border-radius: 12px;
-  background: var(--paper);
-  color: var(--ink);
+  border: 2px solid var(--accent);
+  border-radius: 14px;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 5px 16px rgba(14, 27, 43, 0.24), 0 0 0 3px rgba(111, 138, 122, 0.14);
   cursor: pointer;
-  transition: background .16s ease, color .16s ease, transform .16s ease;
+  transition: background .16s ease, border-color .16s ease, box-shadow .16s ease, transform .16s ease;
 }
 
 .qr-trigger:hover {
-  background: var(--primary);
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
   color: #fff;
-  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(14, 27, 43, 0.3), 0 0 0 4px rgba(111, 138, 122, 0.2);
+  transform: translateY(-2px) scale(1.04);
 }
 
 .qr-trigger svg {
-  width: 19px;
-  height: 19px;
+  width: 27px;
+  height: 27px;
   fill: currentColor;
 }
 
