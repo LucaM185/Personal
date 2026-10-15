@@ -67,6 +67,86 @@ document.addEventListener("keydown", (event) => {
   toggle?.setAttribute("aria-label", "Open menu");
 });
 
+const qrTrigger = document.querySelector(".qr-trigger");
+const qrDialog = document.getElementById("qr-dialog");
+const qrPanel = qrDialog?.querySelector(".qr-dialog-panel");
+const qrCarousel = qrDialog?.querySelector("[data-qr-carousel]");
+const qrSlides = [...(qrDialog?.querySelectorAll("[data-qr-slide]") || [])];
+const qrDots = [...(qrDialog?.querySelectorAll("[data-qr-dot]") || [])];
+const qrCount = qrDialog?.querySelector("[data-qr-count]");
+let qrIndex = 0;
+let qrScrollFrame;
+
+function updateQrUi(index) {
+  qrIndex = Math.max(0, Math.min(qrSlides.length - 1, index));
+  qrDots.forEach((dot, dotIndex) => {
+    if (dotIndex === qrIndex) dot.setAttribute("aria-current", "true");
+    else dot.removeAttribute("aria-current");
+  });
+  if (qrCount) qrCount.textContent = `${qrIndex + 1} / ${qrSlides.length}`;
+}
+
+function showQr(index, behavior = "smooth") {
+  if (!qrCarousel || !qrSlides.length) return;
+  const nextIndex = (index + qrSlides.length) % qrSlides.length;
+  qrCarousel.scrollTo({ left: qrCarousel.clientWidth * nextIndex, behavior });
+  updateQrUi(nextIndex);
+}
+
+function openQrDialog() {
+  if (!qrDialog) return;
+  closeMenus();
+  qrDialog.hidden = false;
+  qrTrigger?.setAttribute("aria-expanded", "true");
+  document.documentElement.classList.add("qr-dialog-open");
+  document.body.classList.add("qr-dialog-open");
+  requestAnimationFrame(() => {
+    showQr(qrIndex, "auto");
+    qrPanel?.focus({ preventScroll: true });
+  });
+}
+
+function closeQrDialog() {
+  if (!qrDialog || qrDialog.hidden) return;
+  qrDialog.hidden = true;
+  qrTrigger?.setAttribute("aria-expanded", "false");
+  document.documentElement.classList.remove("qr-dialog-open");
+  document.body.classList.remove("qr-dialog-open");
+  qrTrigger?.focus({ preventScroll: true });
+}
+
+qrTrigger?.addEventListener("click", openQrDialog);
+qrDialog?.querySelectorAll("[data-qr-close]").forEach((control) => {
+  control.addEventListener("click", closeQrDialog);
+});
+qrDialog?.querySelector("[data-qr-prev]")?.addEventListener("click", () => showQr(qrIndex - 1));
+qrDialog?.querySelector("[data-qr-next]")?.addEventListener("click", () => showQr(qrIndex + 1));
+qrDots.forEach((dot) => {
+  dot.addEventListener("click", () => showQr(Number(dot.dataset.qrDot)));
+});
+qrCarousel?.addEventListener("scroll", () => {
+  cancelAnimationFrame(qrScrollFrame);
+  qrScrollFrame = requestAnimationFrame(() => {
+    if (!qrCarousel.clientWidth) return;
+    updateQrUi(Math.round(qrCarousel.scrollLeft / qrCarousel.clientWidth));
+  });
+}, { passive: true });
+qrCarousel?.addEventListener("keydown", (event) => {
+  if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+  event.preventDefault();
+  event.stopPropagation();
+  showQr(qrIndex + (event.key === "ArrowRight" ? 1 : -1));
+});
+window.addEventListener("resize", () => {
+  if (qrDialog && !qrDialog.hidden) showQr(qrIndex, "auto");
+});
+document.addEventListener("keydown", (event) => {
+  if (!qrDialog || qrDialog.hidden) return;
+  if (event.key === "Escape") closeQrDialog();
+  if (event.key === "ArrowLeft") showQr(qrIndex - 1);
+  if (event.key === "ArrowRight") showQr(qrIndex + 1);
+});
+
 document.querySelectorAll(".photo img").forEach((img) => {
   const frame = img.closest(".photo");
   const fail = () => frame.classList.add("is-empty");
