@@ -333,23 +333,20 @@ a, button { touch-action: manipulation; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  min-height: 42px;
-  padding: 0 14px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: var(--paper);
   color: var(--ink);
-  font: inherit;
-  font-size: 14px;
-  font-weight: 650;
   cursor: pointer;
-  transition: border-color .16s ease, background .16s ease, transform .16s ease;
+  transition: background .16s ease, color .16s ease, transform .16s ease;
 }
 
 .qr-trigger:hover {
-  border-color: var(--secondary);
-  background: var(--paper);
+  background: var(--primary);
+  color: #fff;
   transform: translateY(-1px);
 }
 
@@ -1346,13 +1343,6 @@ input:user-invalid, select:user-invalid, textarea:user-invalid { border-color: #
   .page-hero { padding: 48px 0; }
   .photo-wide { aspect-ratio: 16 / 10; }
   .flight-test-media video { max-height: 72svh; }
-  .qr-trigger {
-    width: 42px;
-    min-height: 42px;
-    padding: 0;
-    border-radius: 50%;
-  }
-  .qr-trigger span { display: none; }
   .qr-dialog { padding: 12px; }
   .qr-dialog-panel {
     width: 100%;
