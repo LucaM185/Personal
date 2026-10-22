@@ -5,7 +5,7 @@ const { applyWorks } = require("./content/work");
 const site = {
   name: "Luca Miglioli",
   tagline: "Industrial workflows",
-  email: "hello@artificialsystems.example",
+  email: "lucamig2004@gmail.com",
 };
 
 const pages = [
