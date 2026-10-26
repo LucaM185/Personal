@@ -3,20 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Image Layout</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link href="https://fonts.cdnfonts.com/css/stretch-pro" rel="stylesheet">
+    <title>Photography — Luca Miglioli</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/styles.css">
 
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            font-family: sans-serif;
-        }
-
         .image-container {
             width: 100%;
         }
@@ -55,79 +46,6 @@
             margin-bottom: 0;
         }
 
-        /* Menu Icon and Name */
-        .menu-container {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            display: flex;
-            align-items: center;
-            z-index: 1000;
-            background: #fff; /* Background to ensure visibility */
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer; /* Make the whole div clickable */
-            font-family: 'Stretch Pro';
-        }
-
-        .menu-icon {
-            font-size: 36px;
-            margin-right: 15px;
-            color: #333;
-        }
-
-        .menu-name {
-            font-size: 24px;
-            color: #333;
-            font-weight: 700;
-        }
-        .menu-end {
-            font-size: 24px;
-            color: #333;
-            font-weight: 700;
-        }
-        
-        /* Sidebar Styles */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: -390px; /* Adjusted to fully hide sidebar at 350px */
-            width: 335px; /* Sidebar width */
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            color: #fff;
-            padding: 60px 20px 20px;
-            transition: left 0.3s ease;
-            z-index: 999;
-            overflow-y: auto;
-        }
-
-        .sidebar.open {
-            left: 0;
-        }
-
-        .sidebar h2 {
-            margin-top: 0;
-            font-size: 28px;
-            font-weight: 700;
-        }
-
-        .sidebar a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            margin: 5px 0;
-        }
-
-        .sidebar a:hover {
-            text-decoration: underline;
-        }
-
-        .sidebar .bio {
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
         @media screen and (max-width: 1910px) {
             .pano{
                 display: none;
@@ -135,51 +53,45 @@
         }
 
 
-        @media(orientation: landscape) {
-        }
-
-        @media (orientation: portrait) {
-            .menu-end {
-                display: none;
-            }
-            .menu-name {
-                display: none;
-            }
-            .menu-icon {
-                margin-right: 0;
-            }
-            .sidebar {
-                width: 200px; 
-            }
-        }
-
     </style>
 </head>
 <body>
 
-    <!-- Menu Icon and Name -->
-    <div class="menu-container" id="menuContainer">
-        <span class="material-icons menu-icon" id="menuIcon">menu</span>
-        <span class="menu-name" id="menuName">LUCAM185</span><span class="menu-end"></span>
-    </div>
+    <a class="skip" href="#content">Skip to content</a>
 
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <h2></h2>
-        <h2 class="name-for-phone" style="font-size: 1em;">LUCA MIGLIOLI</h2>
-        <p class="bio">20yo CS student. I do coding, photography, 3d printing, i love building things </p>         
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="../index.html">
+          <span class="logo-name"><em>L</em>UCA MIGLIOLI</span>
+          <span class="logo-tag">Software · Photography</span>
+        </a>
+        <nav class="nav" id="site-nav" aria-label="Primary">
+          <a class="nav-link" href="../brand/index.html">Industrial workflows</a>
+          <a class="nav-link" href="index.html" aria-current="page">Photography</a>
+          <a class="nav-link" href="../talks/index.html">Talks</a>
+          <a class="nav-link" href="../index.html#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-        <h4 style="margin-bottom: 10px;"><em>Gear</em></h4>
-        <label>Google Pixel 7a</label><br>
-        <label>D3500 with kit lens</label><br>
-        <label>I had a 17-50 2.8</label><br>
-        <label>Sometimes i borrow a canon R7</label><br>
-        <label>Windows laptop to edit</label><br>
-
-        <h4 style="margin-bottom: 10px;"><em>Contacts</em></h4>
-        <a href="mailto:lucamig2004@gmail.com">lucamig2004@gmail.com</a>
-        <a href="https://www.instagram.com/luca_miglioli" target="_blank">Instagram</a>
-    </div>
+    <main id="content">
+    <section class="page-hero band-dark">
+      <div class="waves" aria-hidden="true"></div>
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Photography</span>
+        </nav>
+        <h1>Photography</h1>
+        <p class="lede">Shot on a Google Pixel 7a, a Nikon D3500 with the kit lens and, sometimes, a borrowed Canon R7. Edited on a Windows laptop. More on <a href="https://www.instagram.com/luca_miglioli" target="_blank" rel="noopener">Instagram</a>.</p>
+      </div>
+    </section>
 
     <!-- Main content -->
     <div class="image-container pano">
@@ -236,37 +148,8 @@
 
 
 
-    <script>
-        const menuContainer = document.getElementById('menuContainer');
-        const sidebar = document.getElementById('sidebar');
-        const menuName = document.getElementById('menuName');
-        const menuEnd = document.getElementsByClassName('menu-end')[0];
-        let isNameToggled = false;
+    </main>
 
-        const toggleSidebar = () => {
-            sidebar.classList.toggle('open');
-            isNameToggled = !isNameToggled;
-            menuName.textContent = isNameToggled ? "PHOTOGRAPHY" : "LUCAM185";
-            menuEnd.textContent = isNameToggled ? "" : "";
-        };
-
-        // Make the entire menu container clickable
-        menuContainer.addEventListener('click', (event) => {
-            event.stopPropagation();
-            toggleSidebar();
-        });
-
-        // Close sidebar when clicking anywhere else on the page
-        document.addEventListener('click', (event) => {
-            if (sidebar.classList.contains('open') && !sidebar.contains(event.target)) {
-                toggleSidebar();
-            }
-        });
-
-        // Prevent clicks inside the sidebar from closing it
-        sidebar.addEventListener('click', (event) => {
-            event.stopPropagation();
-        });
-    </script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
